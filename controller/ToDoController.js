@@ -22,6 +22,12 @@ class ToDoController {
     var result = await TODO.updateToDo(id, data);
     response.status(200).json(result);
   }
+   async hechoTodo(req, res) {
+    var id = req.params.id;
+    var result = await todo.hechoTodo(id);
+    res.status(200).json({ serverResponse: result });
+  }
+
   async getToDo(req, res) {
   
     var key = null;
@@ -37,7 +43,8 @@ class ToDoController {
     console.log("----------------todo CONTROLLER--------------------------");
     console.log(result);
     console.log("----------------END CONTROLLER--------------------------");
-    res.status(200).json({ serverResponse: result });
+    res.status(200).json(result); //es.status(200).json({ serverResponse: result });
+
   
   }
  

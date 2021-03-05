@@ -45,6 +45,8 @@ router.post("/ToDoS", ToDoController.createToDo);
 router.get("/ToDoS/:id", ToDoController.getToDo);
 router.put("/ToDoS/:id", ToDoController.updateToDo);
 router.delete("/ToDoS/:id", ToDoController.deleteToDo);
+router.put("/ToDos/:id/realizado", ToDoController.hechoToDo);
+
 
 /* 
 Implemente 
